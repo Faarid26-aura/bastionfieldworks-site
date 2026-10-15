@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bastion Fieldworks LLC | Property maintenance and preservation coordination</title>
+<meta name="description" content="Bastion Fieldworks LLC coordinates property maintenance and preservation work between property managers and qualified local contractors, starting in Ohio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2318212B'/%3E%3Cpath d='M9 8h9a5 5 0 0 1 2.6 9.3A5.5 5.5 0 0 1 18.5 25H9z' fill='%23E0A526'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#18212B; --ink-soft:#3A4652; --field:#2F5D4E; --field-pale:#E4ECE7;
+  --signal:#E0A526; --paper:#F6F7F5; --white:#FFFFFF; --rule:#CDD3CF;
+  --display:"Barlow Semi Condensed",system-ui,sans-serif;
+  --body:"Public Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--field)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0;letter-spacing:-.005em}
+h2{font-size:clamp(2rem,4vw,2.75rem)}
+h3{font-size:1.4rem}
+p{margin:0 0 1em;max-width:62ch}
+
+/* header */
+.top{border-bottom:1px solid var(--rule);background:var(--white)}
+.top .wrap{display:flex;min-width:0;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:700;font-size:1.35rem}
+.brand svg{flex:none}
+.top nav{display:flex;gap:28px}
+.top nav a{color:var(--ink-soft);text-decoration:none;font-weight:500;font-size:.95rem}
+.top nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--ink);color:var(--white);text-decoration:none;font-weight:600;padding:13px 22px;border-radius:4px;font-size:1rem}
+.btn:hover{background:var(--field)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--white)}
+@media (max-width:760px){.top nav{display:none}.top .btn{padding:10px 14px;font-size:.92rem}}
+.brand,.top .btn{white-space:nowrap}
+
+/* hero */
+.hero{padding:72px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6vw,4.4rem)}
+.hero .lede{font-size:1.2rem;color:var(--ink-soft);margin:22px 0 32px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.where{margin-top:28px;font-size:.95rem;color:var(--ink-soft)}
+.where strong{color:var(--ink)}
+
+/* the work order ticket */
+.ticket{background:var(--white);border:1px solid var(--rule);border-top:6px solid var(--signal);border-radius:6px;padding:26px 26px 22px;box-shadow:0 18px 40px -24px rgba(24,33,43,.45)}
+.ticket-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed var(--rule);padding-bottom:14px;margin-bottom:16px}
+.ticket-head b{font-family:var(--display);font-size:1.35rem}
+.ticket-head span{font-size:.85rem;color:var(--ink-soft)}
+.ticket dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0 0 18px;font-size:.95rem}
+.ticket dt{color:var(--ink-soft)}
+.ticket dd{margin:0;font-weight:500}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.steps li{display:flex;align-items:center;gap:12px;font-size:.95rem}
+.steps i{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--rule);display:grid;place-items:center}
+.steps li.done i{background:var(--field);border-color:var(--field)}
+.steps li.done i::after{content:"";width:6px;height:10px;border:solid var(--white);border-width:0 2px 2px 0;transform:translateY(-1px) rotate(45deg)}
+.steps li.now i{border-color:var(--signal);background:var(--signal)}
+.steps li.now{font-weight:600}
+.ticket small{display:block;margin-top:16px;color:var(--ink-soft);font-size:.8rem}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero{padding:48px 0 64px}}
+
+/* sections */
+section{padding:84px 0;border-top:1px solid var(--rule)}
+.intro{max-width:640px;margin-bottom:44px}
+.intro p{color:var(--ink-soft);margin-top:14px}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:0 48px}
+.services div{border-top:2px solid var(--ink);padding:18px 0 28px}
+.services ul{list-style:none;margin:12px 0 0;padding:0;color:var(--ink-soft)}
+.services li{padding:5px 0;border-bottom:1px solid var(--rule)}
+.services li:last-child{border-bottom:0}
+.note{font-size:.92rem;color:var(--ink-soft);margin-top:8px}
+@media (max-width:860px){.services{grid-template-columns:1fr}}
+
+.flow{background:var(--ink);color:var(--paper);border-top:0}
+.flow .intro p{color:#B9C3CC}
+.flow ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:28px;counter-reset:s}
+.flow li{counter-increment:s;border-top:2px solid #3E4B58;padding-top:18px;position:relative}
+.flow li::before{content:counter(s);font-family:var(--display);font-weight:700;font-size:2.4rem;color:var(--signal);line-height:1;display:block;margin-bottom:12px}
+.flow h3{color:var(--white);margin-bottom:8px}
+.flow li p{color:#B9C3CC;font-size:.97rem}
+@media (max-width:960px){.flow ol{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.flow ol{grid-template-columns:1fr}}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.split > div{padding:36px;border-radius:6px}
+.pm{background:var(--white);border:1px solid var(--rule)}
+.vendor{background:var(--field-pale)}
+.split h2{font-size:2rem;margin-bottom:14px}
+.split ul{padding-left:20px;margin:0 0 26px}
+.split li{margin:6px 0}
+@media (max-width:860px){.split{grid-template-columns:1fr;gap:24px}.split>div{padding:26px}}
+
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.facts{margin:0;display:grid;gap:14px;align-content:start}
+.facts div{border-left:3px solid var(--field);padding-left:14px}
+.facts dt{font-size:.9rem;color:var(--ink-soft)}
+.facts dd{margin:0;font-weight:600}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr;gap:32px}}
+
+.contact{background:var(--white)}
+.contact .wrap{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.contact h2{margin-bottom:10px}
+.mail{overflow-wrap:anywhere;font-family:var(--display);font-weight:700;font-size:clamp(1.4rem,3.4vw,2.2rem);color:var(--ink);text-decoration:none;border-bottom:3px solid var(--signal)}
+.mail:hover{color:var(--field)}
+
+footer{padding:28px 0;font-size:.88rem;color:var(--ink-soft);border-top:1px solid var(--rule)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#18212B"/><path d="M9 8h9a5 5 0 0 1 2.6 9.3A5.5 5.5 0 0 1 18.5 25H9z" fill="#E0A526"/></svg>
+      Bastion Fieldworks
+    </a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#process">How it works</a>
+      <a href="#vendors">For contractors</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn" href="#contact">Contact us</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Property maintenance and preservation, coordinated from work order to closeout.</h1>
+      <p class="lede">We take work orders from property managers, assign them to qualified local contractors, check the completion photos and paperwork, and report back to you.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Send us a work order inquiry</a>
+        <a class="btn ghost" href="#vendors">Join our contractor network</a>
+      </div>
+      <p class="where">Starting in <strong>Ohio</strong>. We expand coverage only as our vetted contractor network grows.</p>
+    </div>
+
+    <figure class="ticket" aria-label="Example of how we track a work order">
+      <div class="ticket-head"><b>Work order</b><span>Example</span></div>
+      <dl>
+        <dt>Scope</dt><dd>Winterization, vacant single-family</dd>
+        <dt>Location</dt><dd>Columbus, OH</dd>
+        <dt>Due</dt><dd>Within client SLA</dd>
+      </dl>
+      <ol class="steps">
+        <li class="done"><i></i>Received and reviewed</li>
+        <li class="done"><i></i>Contractor assigned</li>
+        <li class="done"><i></i>Work completed on site</li>
+        <li class="now"><i></i>Photos and paperwork checked</li>
+        <li><i></i>Submitted to client</li>
+      </ol>
+      <small>Illustration of our process, not a real job.</small>
+    </figure>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="intro">
+      <h2>What we coordinate</h2>
+      <p>Local contractors we vet do the field work. We handle sourcing, scheduling, follow-up, documentation and quality checks.</p>
+    </div>
+    <div class="services">
+      <div>
+        <h3>Preservation</h3>
+        <ul>
+          <li>Initial securing and lock changes</li>
+          <li>Winterization and de-winterization</li>
+          <li>Trash-outs and debris removal</li>
+          <li>Property inspections</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Maintenance and repair</h3>
+        <ul>
+          <li>Handyman and general repairs</li>
+          <li>Plumbing, electrical and HVAC</li>
+          <li>Roofing and exterior repairs</li>
+          <li>Turnover and make-ready work</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Grounds and cleaning</h3>
+        <ul>
+          <li>Lawn care and vegetation</li>
+          <li>Interior and exterior cleaning</li>
+          <li>Emergency maintenance</li>
+          <li>Recurring service visits</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Regulated trades are performed only by contractors who hold the licenses required where the work is done.</p>
+  </div>
+</section>
+
+<section id="process" class="flow">
+  <div class="wrap">
+    <div class="intro">
+      <h2>How a work order moves</h2>
+      <p>A job isn't complete when the contractor leaves. It's complete when the photos, paperwork and your requirements all check out.</p>
+    </div>
+    <ol>
+      <li><h3>Receive</h3><p>We review the scope, deadline and your client-specific rules before anything goes out.</p></li>
+      <li><h3>Assign</h3><p>We match the job to a vetted local contractor by trade, location and availability.</p></li>
+      <li><h3>Track</h3><p>We follow up until the work is done and flag delays before they become missed deadlines.</p></li>
+      <li><h3>Check</h3><p>We review photos and documentation against your requirements and send back anything incomplete.</p></li>
+      <li><h3>Report</h3><p>You get a clean submission and invoice, ready for your records or your client.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="vendors">
+  <div class="wrap split">
+    <div class="pm">
+      <h2>For property managers</h2>
+      <p>One point of contact for field work instead of chasing individual contractors.</p>
+      <ul>
+        <li>Work orders handled to your SLAs and photo standards</li>
+        <li>Your rules kept separately for each portfolio</li>
+        <li>Clear status updates and escalation when something changes</li>
+      </ul>
+      <a class="btn" href="mailto:anderson@bastionfieldworks.com?subject=Property%20manager%20inquiry">Talk to us about your properties</a>
+    </div>
+    <div class="vendor">
+      <h2>For contractors</h2>
+      <p>We're building our Ohio contractor network and want reliable local crews and tradespeople.</p>
+      <ul>
+        <li>Clear scopes and deadlines on every job</li>
+        <li>Agreed rates and payment terms up front</li>
+        <li>We'll ask for a W-9, proof of insurance and any trade licenses</li>
+      </ul>
+      <a class="btn ghost" href="mailto:anderson@bastionfieldworks.com?subject=Contractor%20network%20application">Apply to join the network</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div>
+      <h2>About Bastion Fieldworks</h2>
+    </div>
+    <div>
+      <p>Bastion Fieldworks LLC is an Ohio limited liability company that coordinates property maintenance and preservation work for property managers and property owners.</p>
+      <p>Our founder comes from U.S. property preservation operations, with hands-on experience in vendor management, work-order coordination, photo review and quality control. We built Bastion around what that work taught us: most problems in the field come from unclear scopes, slow follow-up and incomplete documentation, so that's what we manage most closely.</p>
+      <dl class="facts">
+        <div><dt>Legal name</dt><dd>Bastion Fieldworks LLC</dd></div>
+        <div><dt>Organized in</dt><dd>Ohio, 2026</dd></div>
+        <div><dt>Initial service area</dt><dd>Ohio</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div>
+      <h2>Get in touch</h2>
+      <p>Property managers and contractors can reach us by email.</p>
+    </div>
+    <a class="mail" href="mailto:anderson@bastionfieldworks.com">anderson@bastionfieldworks.com</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Bastion Fieldworks LLC. All rights reserved.</span>
+    <span>An Ohio limited liability company.</span>
+  </div>
+</footer>
+</body>
+</html>
